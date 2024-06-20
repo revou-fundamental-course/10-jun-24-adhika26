@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Suhu</h1>
+        <form id="tempForm">
+            <label for="temperature">Masukkan Suhu:</label>
+            <input type="number" id="temperature" name="temperature" required>
+            <label for="unit">Pilih Satuan:</label>
+            <select id="unit" name="unit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+            </select>
+            <button type="submit">Konversi</button>
+        </form>
+        <div id="result">
+            <h2>Hasil Konversi:</h2>
+            <p id="convertedTemp"></p>
+            <p id="explanation"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
