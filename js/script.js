@@ -1,5 +1,13 @@
 document.getElementById('tempForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    convertTemperature();
+});
+
+document.getElementById('reverseBtn').addEventListener('click', function() {
+    reverseConversion();
+});
+
+function convertTemperature() {
     const temperature = parseFloat(document.getElementById('temperature').value);
     const unit = document.getElementById('unit').value;
 
@@ -15,4 +23,14 @@ document.getElementById('tempForm').addEventListener('submit', function(event) {
 
     document.getElementById('convertedTemp').textContent = convertedTemp.toFixed(2);
     document.getElementById('explanation').textContent = explanation;
-});
+}
+
+function reverseConversion() {
+    const unit = document.getElementById('unit');
+    if (unit.value === 'Celsius') {
+        unit.value = 'Fahrenheit';
+    } else {
+        unit.value = 'Celsius';
+    }
+    convertTemperature();
+}
